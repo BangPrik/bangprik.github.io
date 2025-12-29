@@ -2,284 +2,302 @@
 <html lang="en">
   <head>
 
-    <script type="text/javascript">
-            function tb8_makeArray(n) {
-                this.length = n;
-                return this.length;
-            }
-            tb8_messages = new tb8_makeArray(3);
-            tb8_messages[0] = "見て見て、今日はね 星がとっても綺麗なんだ!";
-            tb8_messages[1] = "(´･ω･`)";
-            tb8_messages[2] = "下町からやってきた、物腰柔らかな男。";
-            tb8_rptType = 'infinite';
-            tb8_rptNbr = 5;
-            tb8_speed = 100;
-            tb8_delay = 2000;
-            var tb8_counter = 1;
-            var tb8_currMsg = 0;
-            var tb8_tekst = "";
-            var tb8_i = 0;
-            var tb8_TID = null;
-            function tb8_pisi() {
-                tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
-                document.title = tb8_tekst;
-                tb8_sp = tb8_speed;
-                tb8_i++;
-                if (tb8_i == tb8_messages[tb8_currMsg].length) {
-                    tb8_currMsg++;
-                    tb8_i = 0;
-                    tb8_tekst = "";
-                    tb8_sp = tb8_delay;
-                }
-                if (tb8_currMsg == tb8_messages.length) {
-                    if ((tb8_rptType == 'finite') && (tb8_counter == tb8_rptNbr)) {
-                        clearTimeout(tb8_TID);
-                        return;
-                    }
-                    tb8_counter++;
-                    tb8_currMsg = 0;
-                }
-                tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
-            }
-            tb8_pisi()
-        </script>
-
-    <!-- Change your site description: (It is shown in Google results) -->
-    <meta content="My personal website!" name="description" />
-
-    <!-- Setting character encoding and viewport size. Do not remove. -->
+<title>(´･ω･`)</title>
+	  
+  <marquee behavior="scroll" direction="right" scrollamount="20" style="width:100%; height:100px; overflow: auto;"><img src="https://file.garden/aN0WamYmaWI-Ommd/nyanyanyan.gif"><img src="https://file.garden/aN0WamYmaWI-Ommd/output-onlinegiftools.gif"></marquee>
+   
+	  <!-- Setting character encoding and viewport size. Do not remove. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- FavIcon (small image in tab), change to any image you want: -->
     <link href="https://autism.crd.co/assets/images/gallery07/8ea971be.gif?v=d6547f5c" rel="icon" type="image" />
 
-    <!-- CSS: -->
-    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
-    <link href="./style.css" rel="stylesheet" />
+<meta property="og:title" content="ライス ライス -=≡☆">
+  <meta property="og:description" content="welcome to my fucking website! have fun surfing!">
+  <meta property="og:url" content="https://rice.place/">
+  <meta property="og:image" content="https://rice.nekoweb.org/rice/bitch.jpg">
+
+<!--
+  ,,          ,...                            ,,                                                                                       
+  db        .d' ""                `7MM        db                                                                                       
+            dM`                     MM                                                                                                 
+`7MM       mMMmm`7MM  `7MM  ,p6"bo  MM  ,MP'`7MM  `7MMpMMMb.  .P"Ybmmm     ,pP"Ybd  .gP"Ya   .gP"Ya      `7M'   `MF',pW"Wq.`7MM  `7MM  
+  MM        MM    MM    MM 6M'  OO  MM ;Y     MM    MM    MM :MI  I8       8I   `" ,M'   Yb ,M'   Yb       VA   ,V 6W'   `Wb MM    MM  
+  MM        MM    MM    MM 8M       MM;Mm     MM    MM    MM  WmmmP"       `YMMMa. 8M"""""" 8M""""""        VA ,V  8M     M8 MM    MM  
+  MM        MM    MM    MM YM.    , MM `Mb.   MM    MM    MM 8M            L.   I8 YM.    , YM.    ,         VVV   YA.   ,A9 MM    MM  
+.JMML.    .JMML.  `Mbod"YML.YMbmd'.JMML. YA..JMML..JMML  JMML.YMMMMMb      M9mmmP'  `Mbmmd'  `Mbmmd'         ,V     `Ybmd9'  `Mbod"YML.
+                                                             6'     dP                                      ,V                         
+                                                             Ybmmmd'                                     OOb"    
+
+coded with these fucking hands of mines.
+please refrain from copying my codes, greatly appreciate being inspired.
+rice.place @ 2025 and forever more.
+
+-->
+
+  <style>
+
+@font-face {
+font-family:font;
+src:url("../font/HonyaJi-Re.ttf");
+}
+
+body {
+font-family: font;
+font-size:14px;
+color:#124375;
+background-color: white;
+background-image: url("https://rice.place/rice/cloth.png");
+background-color: rgba(255, 255, 255, 0.5);
+background-blend-mode: overlay;
+image-rendering:pixelated;
+overflow:auto;
+cursor: url('https://rice.place/image/arrow.gif'), auto;
+padding:10px;
+}
+
+.container {
+    margin: auto;
+    width:550px;
+    border:1px dashed #b2c8df;
+    border-radius: 10px 10px 5px 5px; 
+    padding:10px;
+    background-image: url("https://rice.place/image/ditheredclose.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+p {
+    margin:0px;
+    padding:0px;
+}
+
+em {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.stats {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    background: #B2C8DF;
+    background: linear-gradient(90deg, rgba(178, 200, 223, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(178, 200, 223, 1) 90%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+header {
+    margin: auto;
+    margin-top:10px;
+    text-align: center;
+    border:1px solid #b2c8df;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-image: url("https://rice.place/rice/cloth.png");
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+}
+
+.welcome  {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.box {
+  margin-top:10px;
+  border:1px dashed #b2c8df;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding:10px;
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+.boxed {
+  text-align: left;
+  font-weight:bold;
+}
+
+.pfp {
+  border: none; 
+}
+
+.login {
+width:100px;
+margin:auto;
+padding:10px 0px 0px 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap:5px;
+}
+
+form {
+  margin-top:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:8px;
+}
+
+input[type=password] {
+  background-color: white;
+  border: 1px dashed #b2c8df;
+  color: #124375;
+  font-family: ms ui gothic;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: white;
+  border: 1px dashed #b2c8df;
+  color: #124375;
+  font-family: font;
+  font-weight:bold;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius:10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  cursor: url('https://rice.place/image/arrow.gif'), auto;
+}
+
+input[type=submit]:hover {
+  background-color: #F2F7FF;
+  border: 1px dashed #b2c8df;
+  color: #124375;
+  font-family: font;
+  font-weight:bold;
+  font-style:italic;
+  padding: 5px 10px 5px 10px;
+  text-decoration: underline;
+  margin: 4px 2px;
+  border-radius:10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  cursor: url('https://rice.place/image/link.gif'), auto;
+  box-shadow: 0px 0px 5px 0px #8aa4c1 inset;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+footer {
+    margin: auto;
+    padding-top:10px;
+    width: 550px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#s-m-t-tooltip{
+/* basic */
+max-width: 170px;
+ z-index: 999;
+margin: 24px 14px 7px 12px;
+/* style and design */
+padding:5px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+border-radius:10px;
+border:1px groove #b2c8df;
+background-color:white;
+background-image:url("https://file.garden/aUS0a0yqajV7bpNt/anime_118.jpg");
+color: #5d5d5d;
+text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+font-weight:bold;
+box-shadow: 0px 0px 5px 0px #8aa4c1 inset;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+  }
+  .container {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    width:calc(100% - 30px);
+    background-repeat: repeat-x;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  header img {
+    width: 100%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  #pass {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    margin-bottom: 5px;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    flex-wrap: wrap;
+    width:100%;
+  }
+}
+
+  </style>
+        
+</head>
     
-
-    <script>
-      // Template generated with petrapixel's layout generator.
-      // (Please do not remove this credit.)
-      console.log("%cTemplate generated with petrapixel's layout generator: https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt; color: #922a45; background: #ffd3ef");
-    </script>
-  </head>
   <body>
-    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
-    <a href="#content" id="skip-to-content-link">Skip to content</a>
 
-    <div class="layout">
-  
-      <!-- =============================================== -->
-      <!-- HEADER -->
-      <!-- =============================================== -->
-
-      <header>
-
-        <div class="header-content">
-	        <div class="header-title">Website Title</div>
-	        
-	        <!-- NAVIGATION -->
-	        <nav>
-	          <ul>
-	            <li><a href="/">Home</a></li>
-	            <li><a href="/page1">Page 1</a></li>
-	            <li><a href="/page2">Page 2</a></li>
-	            <li><a href="/page3">Page 3</a></li>
-	            <li>
-	                <strong>Submenu (hover to show)</strong>
-	                <ul>
-	                  <li><a href="/page-a">Page A</a></li>
-	                  <li><a href="/page-b">Page B</a></li>
-	                  <li><a href="/page-c">Page C</a></li>
-	                  <li><a href="/page-d">Page D</a></li>
-	                  <li><a href="/page-e">Page E</a></li>
-	                </ul>
-	            </li>
-	          </ul>
-	        </nav>
-        	
-        </div>
-      </header>
-
-	  
-        
-      <!-- =============================================== -->
-      <!-- LEFT SIDEBAR -->
-      <!-- =============================================== -->
-
-      <aside class="left-sidebar">
-	  
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
-          </blockquote>
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <ul>
-            <li>List</li>
-            <li>List</li>
-            <li><a href="/">List</a></li>
-            <li>List</li>
-          </ul>
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <marquee>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          </marquee>
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <img class="full-width-image" src="https://picsum.photos/id/14/1000/400">
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <div class="site-button">
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-        	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
-          </div>
-        </div>
-      </aside>
-	
-      
-  
-      <main id="content"> <!-- Do NOT remove the ID here -->
-
-        
-
-        <!-- =============================================== -->
-        <!-- MAIN CONTENT -->
-        <!-- =============================================== -->
-
-
-        <section>
-
-          <h1>Page Title (Heading 1)</h1>
-          <p>This layout was generated with <a href="https://petrapixel.neocities.org/" target="_blank">petrapixel</a>'s layout generator. You may remove the credit in the footer, but please leave the credit in the code. Thank you!</p>
-          <p>
-            I will now show you how to use the most common HTML text elements:
-            <b>This is bold text.</b> 
-            <strong>This is also bold text.</strong> 
-            <i>This is italic text.</i> 
-            <em>This is also italic text.</em> 
-            <strike>This is strikethrough text.</strike> 
-            <u>This is underlined text.</u> 
-            <a href="https://petrapixel.neocities.org/">This is a link.</a> 
-            <a href="https://petrapixel.neocities.org/" target="_blank">This is a link that will open in a new tab.</a> 
-            <code>This is code (displayed in a monospace font).</code>
-            <abbr title="Example.">This is an abbreviation (Try hovering over it).</abbr>
-            <mark>This is highlighted text.</mark>
-            This is a line break (The br stands for break.): <br />It's different from a paragraph because it does not add space inbetween the lines of text.
-          </p>
-          <p>This is a paragraph. As you can see, there's a bit of space between it and the previous paragraph.</p>
-
-          <blockquote>This is a blockquote. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</blockquote>
-
-          <h2>Heading 2</h2>
-          <ul>
-            <li>Unsorted list</li>
-            <li>Unsorted list</li>
-            <li>Unsorted list</li>
-          </ul>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <ol>
-            <li>Sorted list</li>
-            <li>Sorted list</li>
-            <li>Sorted list</li>
-          </ol>
-
-          <h3>Heading 3</h3>
-          <pre>This is preformatted text, which means that     spaces    are preserved:
-          :D</pre>
-
-          <p>This is preformatted code:</p>
-          <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;body&gt;
-   &lt;h1&gt;My First Heading&lt;/h1&gt;
-   &lt;p&gt;My first paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-          <p>This is a separator line / divider:</p>
-          <hr /> <!-- hr = horizontal rule -->
-
-          <p>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
-
-          <h4>Heading 4</h4>
-
-          <p>Here are two columns:</p>
-          <div class="two-columns">
-	          <div>
-	          	<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-	          	<p>At
-            vero eos et accusam et justo duo dolores et ea rebum.</p>
-	          </div>
-	          <div>
-	          	<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-	          	<p>At
-            vero eos et accusam et justo duo dolores et ea rebum.</p>
-	          </div>
-          </div>
-
-          <h5>Heading 5</h5>
-
-          <p>This is an image:</p>
-          <img class="image" alt="" src="https://picsum.photos/id/14/200/100" />
-
-          <p>This is a full-width image:</p>
-          <img class="full-width-image" alt="" src="https://picsum.photos/id/14/1000/400" />
-
-          <p>These are multiple images in a row:</p>
-          <div class="images">
-            <img alt="" src="https://picsum.photos/id/14/1000/400" />
-            <img alt="" src="https://picsum.photos/id/14/1000/400" />
-            <img alt="" src="https://picsum.photos/id/14/1000/400" />
-          </div>
-
-          <h6>Heading 6</h6>
-          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-
-        </section>
-      </main>
-
-
-      <!-- =============================================== -->
-      <!-- FOOTER -->
-      <!-- =============================================== -->
-
-      <footer>
-            <div>Footer Text. <a href="/">Link.</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
-      </footer>
-  
-    <!-- Closing .layout: -->
+<div class="container">
+   
+    
+    <header>
+        <img src="https://file.garden/aUFUpOSqZxuC8ii9/f573ff5d-f996-4dea-bd6a-5bbca8978128.jpg">
+    </header>
+    <div class="welcome">
+        ello welcome to my evil site <3 btw this is a place for the nostalgic peoples :D
     </div>
+    <div class="box">
+        <div class="pfp">
+            <img src="https://autism.crd.co/assets/images/gallery07/23a723a7.gif?v=d6547f5c">
+        </div>
+        <div class="boxed">
+        though this site was made cute, it was also scary!! viewer discretion is definitely advised!
+        </div>
+    </div>
+    <form action="https://bangprik.github.io/home">
+        <div id="pass">WAAIITT!!! <b>enter <u>password</u></b>:</div> <input type="password" minlength="5" maxlength="10" placeholder="weed" autocomplete="off" readonly 
+    onfocus="this.removeAttribute('readonly');" required>
+        <input type="submit" value="login">
+    </form>
+</div>
+<footer><marquee>
+    <img src="https://dokode.moe/media/88x31deco/chrome2.gif"> <img src="https://housepen.nekoweb.org/graphics/capybaraNOW.png"> <img src="https://gifcity.carrd.co/assets/images/gallery27/13ba1f56.gif?v=e3c0bc0f"> <img src="https://gifcity.carrd.co/assets/images/gallery30/f5f0852e.gif?v=e3c0bc0f"> <img src="https://gifcity.carrd.co/assets/images/gallery28/aa69f752.jpg?v=e3c0bc0f">
+</footer></marquee>
 
+  
 
-    <!-- Add any additional Javascript code (<script></script>) here. -->
-  </body>
-</html>
+	  
+
+  </html>
