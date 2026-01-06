@@ -1,306 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>98.js - Windows 98 Online</title>
+		<link href="layout.css" rel="stylesheet" type="text/css">
+		<link href="lib/os-gui/layout.css" rel="stylesheet" type="text/css">
+		<link href="lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
+		<link href="lib/clippy.js/build/clippy.css" rel="stylesheet" type="text/css">
+		<link href="classic.css" rel="stylesheet" type="text/css">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=LbWArJzeO7">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=LbWArJzeO7">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=LbWArJzeO7">
+		<link rel="manifest" href="/site.webmanifest?v=LbWArJzeO7">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg?v=LbWArJzeO7" color="#5bbad5">
+		<link rel="shortcut icon" href="/favicon.ico?v=LbWArJzeO7">
+		<meta name="apple-mobile-web-app-title" content="98.js">
+		<meta name="application-name" content="98.js">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="theme-color" content="#008080">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<!-- For WayBack Machine, hopefully get it to save these resources -->
+		<link rel="prefetch" href="/filesystem-index.json">
+		<link rel="prefetch" href="/desktop/CREDITS.txt">
+		<link rel="prefetch" href="/programs/notepad/index.html">
+	</head>
+	<body>
+		<div class="desktop" style="background-image: url(images/clouds.jpg); background-size: cover; background-position: center;"></div>
+		<div class="taskbar" style="z-index: 5000;">
+			<button class="start-button toggle" title="Click here to begin.">
+				<img src="images/start.png"/><b>Start</b>
+			</button>
+			<div class="taskbar-divider"></div>
+			<!-- TODO: pinned apps and resizing handles -->
+			<div class="tasks"></div>
+			<div class="taskbar-divider"></div>
+			<div class="tray inset-shallow">
+				<div class="tray-icons">
+					<img class="tray-icon" src="images/icons/task-scheduler-16x16.png" title="Task Scheduler is not ready." onclick="showMessageBox({iconID: 'info', message: 'Good day to you!'})">
+					<img class="tray-icon" src="images/icons/audio-okay-16x16.png" title="Volume" onclick="showMessageBox({iconID: 'info', message: 'Have a wonderful day!'})">
+				</div>
+				<div class="taskbar-time" ondblclick="showMessageBox({iconID: 'info', message: 'Time to get an old clock!'})"></div>
+			</div>
+		</div>
+		<div class="start-menu outset-deep" hidden style="display: none; z-index: 5001;">
+			<div class="start-menu-titlebar"></div>
+			<div class="start-menu-content">
+				<h1 style="font-family: cursive; font-size: 2em;">’S tart</h1>
+				<h2 style="font-family: cursive; font-size: 1em; color: gray; margin: 0; margin-left: 300px; white-space: nowrap;">’s a strawberry tart</h1>
+				<img src="https://i.postimg.cc/dtxsJq0d/CK1IhDr.gif"/>
+			</div>
+		</div>
+		<script src="lib/jquery.min.js"></script>
+		<script src="lib/browserfs.js"></script>
+		<script src="lib/clippy.js/build/clippy.js"></script>
+		<script src="lib/konami.js"></script>
+		<script src="lib/os-gui/parse-theme.js"></script>
+		<script src="lib/os-gui/MenuBar.js"></script>
+		<script src="lib/os-gui/$Window.js"></script>
+		<script src="src/msgbox.js"></script>
+		<script>defaultMessageBoxTitle = "Windows";</script>
+		<script src="src/3d-fun.js"></script>
+		<script src="src/helpers.js"></script>
+		<script src="src/filesystem-setup.js"></script>
+		<script src="src/iframe-windows.js"></script>
+		<script src="src/Task.js"></script>
+		<script src="src/$taskbar-time.js"></script>
+		<script src="src/$start-menu.js"></script>
+		<script src="src/FolderView.js"></script>
+		<script src="src/FolderViewItem.js"></script>
+		<script src="src/$desktop.js"></script>
+		<script src="src/window-switcher.js"></script>
+		<script src="src/visualizer-overlay.js"></script>
+		<script src="src/programs.js"></script>
 
-<title>(´･ω･`)</title>
-
-	  <div style="float:  ; max-width: 200px; height: auto; position: fixed; left: 37px; top: 9px; z-index: 200;"> <img src="https://file.garden/aOkDrFl3xwd-pXv0/unregistered.jpg"</a></div>
-  <div style="float:  ; max-width: 200px; height: auto; position: fixed; left: 37px; top: 9px; z-index: 200;"> <img src="https://file.garden/aOkDrFl3xwd-pXv0/picmix.com_2788032.gif"</a></div>
-	  
-  <marquee behavior="scroll" direction="right" scrollamount="20" style="width:100%; height:100px; overflow: auto;"><img src="https://file.garden/aN0WamYmaWI-Ommd/nyanyanyan.gif"><img src="https://file.garden/aN0WamYmaWI-Ommd/output-onlinegiftools.gif"></marquee>
-   
-	  <!-- Setting character encoding and viewport size. Do not remove. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- FavIcon (small image in tab), change to any image you want: -->
-    <link href="https://autism.crd.co/assets/images/gallery07/23a723a7.gif?v=d6547f5c" rel="icon" type="image" />
-
-<meta property="og:title" content="ライス ライス -=≡☆">
-  <meta property="og:description" content="welcome to my fucking website! have fun surfing!">
-  <meta property="og:url" content="https://rice.place/">
-  <meta property="og:image" content="https://rice.nekoweb.org/rice/bitch.jpg">
-
-<!--
-  ,,          ,...                            ,,                                                                                       
-  db        .d' ""                `7MM        db                                                                                       
-            dM`                     MM                                                                                                 
-`7MM       mMMmm`7MM  `7MM  ,p6"bo  MM  ,MP'`7MM  `7MMpMMMb.  .P"Ybmmm     ,pP"Ybd  .gP"Ya   .gP"Ya      `7M'   `MF',pW"Wq.`7MM  `7MM  
-  MM        MM    MM    MM 6M'  OO  MM ;Y     MM    MM    MM :MI  I8       8I   `" ,M'   Yb ,M'   Yb       VA   ,V 6W'   `Wb MM    MM  
-  MM        MM    MM    MM 8M       MM;Mm     MM    MM    MM  WmmmP"       `YMMMa. 8M"""""" 8M""""""        VA ,V  8M     M8 MM    MM  
-  MM        MM    MM    MM YM.    , MM `Mb.   MM    MM    MM 8M            L.   I8 YM.    , YM.    ,         VVV   YA.   ,A9 MM    MM  
-.JMML.    .JMML.  `Mbod"YML.YMbmd'.JMML. YA..JMML..JMML  JMML.YMMMMMb      M9mmmP'  `Mbmmd'  `Mbmmd'         ,V     `Ybmd9'  `Mbod"YML.
-                                                             6'     dP                                      ,V                         
-                                                             Ybmmmd'                                     OOb"    
-
-coded with these fucking hands of mines.
-please refrain from copying my codes, greatly appreciate being inspired.
-rice.place @ 2025 and forever more.
-
--->
-
-  <style>
-
-@font-face {
-font-family:font;
-src:url("../font/HonyaJi-Re.ttf");
-}
-
-body {
-font-family: font;
-font-size:14px;
-color:#124375;
-background-color: white;
-background-image: url("https://file.garden/aUS0a0yqajV7bpNt/anime_118.jp");
-background-color: rgba(255, 255, 255, 0.5);
-background-blend-mode: overlay;
-image-rendering:pixelated;
-overflow:auto;
-cursor: url('https://rice.place/image/arrow.gif'), auto;
-padding:10px;
-}
-
-.container {
-    margin: auto;
-    width:550px;
-    border:1px dashed #b2c8df;
-    border-radius: 10px 10px 5px 5px; 
-    padding:10px;
-    background-image: url("https://confettiguts.gay/siteImg/musicbg.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-p {
-    margin:0px;
-    padding:0px;
-}
-
-em {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.stats {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    gap:20px;
-    background: #B2C8DF;
-    background: linear-gradient(90deg, rgba(178, 200, 223, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(178, 200, 223, 1) 90%);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 10px;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-header {
-    margin: auto;
-    margin-top:10px;
-    text-align: center;
-    border:1px solid #b2c8df;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-image: url("https://rice.place/rice/cloth.png");
-    background-attachment: fixed;
-    background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: overlay;
-}
-
-.welcome  {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.box {
-  margin-top:10px;
-  border:1px dashed #b2c8df;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  padding:10px;
-  display: flex;
-  align-items: center;
-  gap:10px;
-}
-
-.boxed {
-  text-align: left;
-  font-weight:bold;
-}
-
-.pfp {
-  border: none; 
-}
-
-.login {
-width:100px;
-margin:auto;
-padding:10px 0px 0px 0px;
-display: flex;
-justify-content: center;
-align-items: center;
-gap:5px;
-}
-
-form {
-  margin-top:10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap:8px;
-}
-
-input[type=password] {
-  background-color: white;
-  border: 1px dashed #b2c8df;
-  color: #124375;
-  font-family: ms ui gothic;
-  font-size: 16px;
-  padding: 5px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  background-color: white;
-  border: 1px dashed #b2c8df;
-  color: #124375;
-  font-family: font;
-  font-weight:bold;
-  padding: 5px 10px 5px 10px;
-  text-decoration: none;
-  margin: 4px 2px;
-  border-radius:10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  cursor: url('https://rice.place/image/arrow.gif'), auto;
-}
-
-input[type=submit]:hover {
-  background-color: #F2F7FF;
-  border: 1px dashed #b2c8df;
-  color: #124375;
-  font-family: font;
-  font-weight:bold;
-  font-style:italic;
-  padding: 5px 10px 5px 10px;
-  text-decoration: underline;
-  margin: 4px 2px;
-  border-radius:10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  cursor: url('https://rice.place/image/link.gif'), auto;
-  box-shadow: 0px 0px 5px 0px #8aa4c1 inset;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-footer {
-    margin: auto;
-    padding-top:10px;
-    width: 550px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-#s-m-t-tooltip{
-/* basic */
-max-width: 170px;
- z-index: 999;
-margin: 24px 14px 7px 12px;
-/* style and design */
-padding:5px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-border-radius:10px;
-border:1px groove #b2c8df;
-background-color:white;
-background-image:url("https://file.garden/aUS0a0yqajV7bpNt/anime_118.jpg");
-color: #5d5d5d;
-text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-font-weight:bold;
-box-shadow: 0px 0px 5px 0px #8aa4c1 inset;
-}
-
-@media (max-width: 800px) {
-  body {
-    padding:10px;
-    display:flex;
-    flex-direction: column;
-  }
-  .container {
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    width:calc(100% - 30px);
-    background-repeat: repeat-x;
-  }
-  .stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap:5px;
-    width: 100%;
-  }
-  header {
-    width: 100%;
-  }
-  header img {
-    width: 100%;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  #pass {
-    display: flex;
-    justify-content: center;
-    gap:10px;
-    margin-bottom: 5px;
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    gap:10px;
-    flex-wrap: wrap;
-    width:100%;
-  }
-}
-
-  </style>
-        
-</head>
+		<!-- TODO: DRY -->
+		<svg style="position: absolute; pointer-events: none; bottom: 100%;">
+			<defs>
+				<filter id="disabled-inset-filter" x="0" y="0" width="1px" height="1px">
+					<feColorMatrix
+						in="SourceGraphic"
+						type="matrix"
+						values="
+							1 0 0 0 0
+							0 1 0 0 0
+							0 0 1 0 0
+							-1000 -1000 -1000 1 0
+						"
+						result="black-parts-isolated"
+					/>
+					<feFlood result="shadow-color" flood-color="var(--ButtonShadow)"/>
+					<feFlood result="hilight-color" flood-color="var(--ButtonHilight)"/>
+					<feOffset in="black-parts-isolated" dx="1" dy="1" result="offset"/>
+					<feComposite in="hilight-color" in2="offset" operator="in" result="hilight-colored-offset"/>
+					<feComposite in="shadow-color" in2="black-parts-isolated" operator="in" result="shadow-colored"/>
+					<feMerge>
+						<feMergeNode in="hilight-colored-offset"/>
+						<feMergeNode in="shadow-colored"/>
+					</feMerge>
+				</filter>
+			</defs>
+		</svg>
+		<script>
+			// This doesn't seem to be a problem in the Help viewer,
+			// but better safe than sorry.
+			window.addEventListener("resize", ()=> {
+				// work around a browser bug in Chrome where
+				// the SVG filter behaves differently based on the INITIAL zoom level
+				// (if you zoom in, the icons get cut off, if you zoom out, the effect is too thick)
+				document.getElementById("disabled-inset-filter").setAttribute("x", "0");
+			});
+		</script>
+	</body>
+</html>
     
-  <body>
-
-<div class="container">
-   
-    
-    <header>
-        <img src="https://file.garden/aUFUpOSqZxuC8ii9/f573ff5d-f996-4dea-bd6a-5bbca8978128.jpg">
-    </header>
-    <div class="welcome">
-        ello welcome to my evil site <3 btw this is a place for the nostalgic peoples :D
-    </div>
-    <div class="box">
-        <div class="pfp">
-            <img src="https://autism.crd.co/assets/images/gallery07/23a723a7.gif?v=d6547f5c">
-        </div>
-        <div class="boxed">
-        though this site was made cute, it was also scary!! viewer discretion is definitely advised!
-        </div>
-    </div>
-    <form action="https://bangprik.github.io/home/home.html">
-        <div id="pass">WAAIITT!!! <b>entr <u>password!!</u></b>:</div> <input type="password" minlength="5" maxlength="10" placeholder="weed" autocomplete="off" readonly 
-    onfocus="this.removeAttribute('readonly');" required>
-        <input type="submit" value="login">
-    </form>
-</div>
-<footer><marquee>
-    <img src="https://dokode.moe/media/88x31deco/chrome2.gif"> <img src="https://housepen.nekoweb.org/graphics/capybaraNOW.png"> <img src="https://gifcity.carrd.co/assets/images/gallery27/13ba1f56.gif?v=e3c0bc0f"> <img src="https://gifcity.carrd.co/assets/images/gallery30/f5f0852e.gif?v=e3c0bc0f"> <img src="https://gifcity.carrd.co/assets/images/gallery28/aa69f752.jpg?v=e3c0bc0f">
-</footer></marquee>
-
-  
-
-	  
-
-  </html>
